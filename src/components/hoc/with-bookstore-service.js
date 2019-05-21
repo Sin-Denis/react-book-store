@@ -4,6 +4,7 @@ import { BookStoreServiceConsumer } from "../bookstore-service-context";
 const WithBookStoreService = () => (Wrapped) => {
 
   return (props) => {
+
     return (
       <BookStoreServiceConsumer>
         {
@@ -13,7 +14,8 @@ const WithBookStoreService = () => (Wrapped) => {
         }
       </BookStoreServiceConsumer>
     );
-  }
+
+  };
 
 };
 
