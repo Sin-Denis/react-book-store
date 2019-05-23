@@ -4,13 +4,22 @@ import { HomePage, CartPage } from '../pages';
 import './app.css';
 
 import { WithBookStoreService } from '../hoc';
+import ShopHeader from '../shop-header';
 
 const App = ({ bookstoreService }) => {
   return (
-    <Switch>
-      <Route path="/" component={ HomePage } exact />
-      <Route path="/cart" component={ CartPage } exact/>
-    </Switch>
+    <main role="main" className="container">
+      <ShopHeader numItems={5} total={210}/>
+      <Switch>
+        <Route
+          path="/"
+          component={ HomePage }
+          exact />
+        <Route
+          path="/cart"
+          component={ CartPage }  />
+      </Switch>
+    </main>
   )
 };
 
