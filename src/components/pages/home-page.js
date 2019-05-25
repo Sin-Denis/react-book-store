@@ -8,7 +8,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <BookList />
-        <ShoppingCartTable/>
+        <ShoppingCartTable />
       </div>
     );
   }
